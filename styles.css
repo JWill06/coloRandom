@@ -1,7 +1,7 @@
 body {
     background-color: #E7F1F1;
     display:flex;
-    flex-direction:column
+    flex-direction:column;
 
 }
 
@@ -60,3 +60,26 @@ h1 {
 #box-5 {
     background-color:#A4C4CA;
 }
+
+.button-grid{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 45px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .palettes {
+    width: 7rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border-top-right-radius: 25rem;
+    border-bottom-left-radius: 25rem;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    border: 0;
+  }
