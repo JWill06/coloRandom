@@ -2,8 +2,7 @@ var hexData = [ 'A', 'B', 'C', 'D', 'E', 'F','0','1','2','3','4','5','6','7','8'
 var pallet= [];
 var newPalette = document.querySelector('#paletteButton');
 var unlockIcons = document.querySelectorAll('.icon');
-var isLocked = true;
-var lockedStatus = [false, false, false, false, false]
+var isLocked = [false, false, false, false, false];
 
 newPalette.addEventListener('click', function(event){
     event.preventDefault();
@@ -11,10 +10,11 @@ newPalette.addEventListener('click', function(event){
     updateHtml();
 });
 
-unlockIcons.forEach(function (icon) {
+unlockIcons.forEach(function (icon, index) {
     icon.addEventListener('click', function (event) {
         event.preventDefault();
         lockIcon(icon);
+        toggleLock(index);
     });
 });
 
@@ -35,9 +35,9 @@ function getRandomPallet () {
     pallet = [];
     for (let i = 0; i < 5; i++) {
         if (!isLocked[i]){
-            pallet.push(getHexCode())
+            pallet.push(getHexCode());
         } else {
-            pallet.push(documet.getElementById('color-' + (i + 1)).textContent.substr(1));
+            pallet.push(document.getElementById('color-' + (i + 1)).textContent.substr(1));
         }
     }
 }
@@ -63,6 +63,13 @@ function lockIcon(icon) {
     }
 
     icon.setAttribute('src', newIcon);
+}
+
+function toggleLock(index) {
+    isLocked[index] = !isLocked[index];
+
+    
+    unlockIcons[index].src = isLocked[index] ? 'assets/locked.png' : 'assets/unlocked.png';
 }
 
 
