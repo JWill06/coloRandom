@@ -3,6 +3,7 @@ var pallet= [];
 var newPalette = document.querySelector('#paletteButton');
 var parentGrid = document.getElementById('parent-grid');
 var labelGrid = document.querySelector('.label-grid');
+var lockedStatus = [false, false, false, false, false]
 
 newPalette.addEventListener('click', function(event){
     event.preventDefault();
