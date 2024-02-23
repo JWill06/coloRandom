@@ -1,14 +1,21 @@
 var hexData = [ 'A', 'B', 'C', 'D', 'E', 'F','0','1','2','3','4','5','6','7','8','9'];
 var pallet= [];
 var newPalette = document.querySelector('#paletteButton');
-var parentGrid = document.getElementById('parent-grid');
-var labelGrid = document.querySelector('.label-grid');
+var unlockIcons = document.querySelectorAll('.icon');
+var isLocked = true;
 var lockedStatus = [false, false, false, false, false]
 
 newPalette.addEventListener('click', function(event){
     event.preventDefault();
     getRandomPallet();
     updateHtml();
+});
+
+unlockIcons.forEach(function (icon) {
+    icon.addEventListener('click', function (event) {
+        event.preventDefault();
+        lockIcon(icon);
+    });
 });
 
 function getRandomIndex(array){
@@ -27,7 +34,11 @@ function getHexCode(){
 function getRandomPallet () {
     pallet = [];
     for (let i = 0; i < 5; i++) {
-        pallet.push(getHexCode())
+        if (!isLocked[i]){
+            pallet.push(getHexCode())
+        } else {
+            pallet.push(documet.getElementById('color-' + (i + 1)).textContent.substr(1));
+        }
     }
 }
 
@@ -40,3 +51,18 @@ function updateHtml() {
         document.getElementById(colorId).textContent = '#' + pallet[i];
     }
 }
+
+function lockIcon(icon) {
+    var currentIcon = icon.getAttribute('src');
+    var newIcon;
+
+    if (currentIcon === 'assets/unlocked.png') {
+        newIcon = 'assets/locked.png';
+    } else {
+        newIcon = 'assets/unlocked.png';
+    }
+
+    icon.setAttribute('src', newIcon);
+}
+
+

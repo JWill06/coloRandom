@@ -95,6 +95,7 @@ h1 {
     flex-direction: row;
     justify-content: flex-end;
     align-items: flex-end;
+    margin: 5px;
     height: 20px;
     width: 20px;
 }
