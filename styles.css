@@ -99,3 +99,40 @@ h1 {
     height: 20px;
     width: 20px;
 }
+
+.button-grid{
+    align-items: center;
+    display: flex;
+    margin: 100px;
+    font-family: "Poppins", sans-serif;
+    justify-content: space-evenly
+  }
+  
+.palettes {
+    width: 8rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border-top-right-radius: 25rem;
+    border-bottom-left-radius: 25rem;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    border: 0;
+  }
+.savePalette {
+    width: 8rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border-top-right-radius: 25rem;
+    border-bottom-left-radius: 25rem;
+    justify-content: center;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    border: 0;
+}
