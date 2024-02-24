@@ -6,6 +6,12 @@ body {
 
 }
 
+.main {
+    display:flex;
+    flex-direction:column;
+    width:75%;
+}
+
 h1 {
     display:flex;
     flex-direction:row;
@@ -19,6 +25,7 @@ h1 {
     display: inline-flex;
     justify-content: center;
    }
+
 .label-grid{
     display: inline-flex;
     justify-content: center;
@@ -71,22 +78,7 @@ h1 {
     display: flex;
     margin: 45px;
   }
-  
-  .palettes {
-    width: 7rem;
-    height: 2rem;
-    background-color: black;
-    color: white;
-    border-top-right-radius: 25rem;
-    border-bottom-left-radius: 25rem;
-    justify-content: center;
-    text-align: center;
-    font-style: normal;
-    font-size: 12px;
-    border: 0;
-  }
-
-
+ 
 .icon {
     display: flex;
     flex-direction: row;
@@ -98,10 +90,11 @@ h1 {
 }
 
 .button-grid{
-    align-items: center;
     display: flex;
-    margin: 100px;
-    justify-content: space-evenly
+    align-items: center;
+    margin-top:80px;
+    justify-content:center;
+    width:
   }
   
 .palettes {
@@ -129,4 +122,11 @@ h1 {
     font-style: normal;
     font-size: 13px;
     border: 0;
+}
+
+.saved-palettes-section {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
 }
