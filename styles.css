@@ -2,7 +2,14 @@ body {
     background-color: #E7F1F1;
     display:flex;
     flex-direction:column;
+    font-family: "Poppins", sans-serif;
 
+}
+
+.main {
+    display:flex;
+    flex-direction:column;
+    width:75%;
 }
 
 h1 {
@@ -10,7 +17,6 @@ h1 {
     flex-direction:row;
     justify-content: center;
     color:black;
-    font-family: "Poppins", sans-serif;
     font-weight: 800;
     font-style: normal;
 }
@@ -19,11 +25,11 @@ h1 {
     display: inline-flex;
     justify-content: center;
    }
+
 .label-grid{
     display: inline-flex;
     justify-content: center;
     text-align: center;
-    font-family: "Poppins", sans-serif;
     align-items:center;
     
    }
@@ -71,25 +77,8 @@ h1 {
     align-items: center;
     display: flex;
     margin: 45px;
-    font-family: "Poppins", sans-serif;
   }
-  
-  .palettes {
-    width: 7rem;
-    height: 2rem;
-    background-color: black;
-    color: white;
-    border-top-right-radius: 25rem;
-    border-bottom-left-radius: 25rem;
-    justify-content: center;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-size: 12px;
-    border: 0;
-  }
-
-
+ 
 .icon {
     display: flex;
     flex-direction: row;
@@ -98,4 +87,46 @@ h1 {
     margin: 5px;
     height: 20px;
     width: 20px;
+}
+
+.button-grid{
+    display: flex;
+    align-items: center;
+    margin-top:80px;
+    justify-content:center;
+    width:
+  }
+  
+.palettes {
+    width: 8rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border-top-right-radius: 25rem;
+    border-bottom-left-radius: 25rem;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-size: 13px;
+    border: 0;
+  }
+.savePalette {
+    width: 8rem;
+    height: 2rem;
+    background-color: black;
+    color: white;
+    border-top-right-radius: 25rem;
+    border-bottom-left-radius: 25rem;
+    justify-content: center;
+    text-align: center;
+    font-style: normal;
+    font-size: 13px;
+    border: 0;
+}
+
+.saved-palettes-section {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
 }

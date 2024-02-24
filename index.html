@@ -10,8 +10,9 @@
     <title>COLORANDOM</title>
 </head>
 <body>
-    <h1>COLORANDOM</h1>
-    <section id="parent-grid">
+    <section class="main">
+      <header class="Header1"><h1>COLORANDOM</h1></header>
+      <section id="parent-grid">
         <div class="box" id="box-1">
             <img class="icon" src="assets/unlocked.png" alt="Unlock">
         </div>
@@ -27,17 +28,23 @@
         <div class="box" id="box-5">
             <img class="icon" src="assets/unlocked.png" alt="Unlock">
         </div>
-    </section>
-    <section class="label-grid">
+      </section>
+      <section class="label-grid">
         <p class="color" id="color-1">#EA9999</p>
         <p class="color" id="color-2">#FACB9C</p>
         <p class="color" id="color-3">#FFE59A</p>
         <p class="color" id="color-4">#B6D7A8</p>
         <p class="color" id="color-5">#A4C4CA</p>
-    </section>
-    <section class="button-grid">
-        <button class="palettes" id="paletteButton">New Palette</button>
       </section>
-      <script src="main.js"></script>
+      <section class="button-grid">
+        <button class="palettes" id="paletteButton">New Palette</button>
+        <button class="savePalette" id="savePaletteButton">Save Palette</button>
+      </section>
+    </section>
+    <section class="saved-palettes-section">
+      <header class="Header2"><h2> Saved Palette</h2></header>
+    </section>
+
+    <script src="main.js"></script>
 </body>
 </html>
