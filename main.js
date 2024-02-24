@@ -1,12 +1,18 @@
 var hexData = [ 'A', 'B', 'C', 'D', 'E', 'F','0','1','2','3','4','5','6','7','8','9'];
 var pallet= [];
-var newPalette = document.querySelector('#paletteButton');
+var savedPalettes = [];
+// var par = document.querySelector('#mini-palette');
+var newPalette = document.querySelector('#palette-Button');
+var savePalette = document.querySelector('#save-Palette-Button');
+var savedPaletteSection = document.querySelector('.saved-palettes-section');
 var unlockIcons = document.querySelectorAll('.icon');
 var isLocked = [false, false, false, false, false];
 
+addEventListener('load', getRandomPalette);
+
 newPalette.addEventListener('click', function(event){
     event.preventDefault();
-    getRandomPallet();
+    getRandomPalette();
     updateHtml();
 });
 
@@ -17,6 +23,27 @@ unlockIcons.forEach(function (icon, index) {
         toggleLock(index);
     });
 });
+
+savePalette.addEventListener('click', function(event){
+    event.preventDefault();
+    savedPalette();
+});
+
+function savedPalette() {
+    var section = document.createElement('section');
+    section.className = "mini-palette";
+    var lastPalette = [] 
+    for (let i = 0; i < pallet.length; i++) {
+       
+    }
+
+    removeMessage();
+}
+
+function removeMessage(){
+    document.querySelector('#mini-palette').classList.add('hidden');
+}
+
 
 function getRandomIndex(array){
     var randomIndex = Math.floor(Math.random() * array.length)
@@ -31,7 +58,7 @@ function getHexCode(){
     return randomHex.join('');
 }
 
-function getRandomPallet () {
+function getRandomPalette () {
     pallet = [];
     for (let i = 0; i < 5; i++) {
         if (!isLocked[i]){
