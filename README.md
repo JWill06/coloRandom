@@ -14,6 +14,9 @@ https://github.com/JWill06/coloRandom
 ## Usage
 ColoRandom is an app that generates a set of five random colors at a time. If the user wants to keep specific colors, they may do so by clicking the lock icon before generating a new set. ColoRandom is replete with features, including generating random palettes, saving palettes, and deleting saved palettes. The possibilities are endless!
 
+<img width="1415" alt="Screenshot 2024-02-25 at 1 07 54 PM" src="https://github.com/JWill06/coloRandom/assets/156006806/87339914-4bf8-4030-9f8d-9000f7e9380f">
+
+
 ## Contributing 
 Co-authored-by Jordan Williamson : www.github.com/JWill06
 Co-authored-by Lydia Sims : www.github.com/LISims88
