@@ -7,6 +7,7 @@ var savePalette = document.querySelector('#save-Palette-Button');
 var savedPaletteSection = document.querySelector('.saved-palettes-section');
 var unlockIcons = document.querySelectorAll('.icon');
 var isLocked = [false, false, false, false, false];
+var deleteButton = document.querySelector(".delete-x")
 
 addEventListener('load', function(){
     getRandomPalette()
@@ -32,6 +33,8 @@ savePalette.addEventListener('click', function(event){
     savedPalette();
 });
 
+deleteButton.addEventListener('click', deletePalletArray);
+
 function savedPalette() {
      var miniBoxes = ''
       
@@ -44,11 +47,28 @@ function savedPalette() {
     }
     savedPaletteSection.innerHTML += `
     <section class = "miniBoxes">
-    ${miniBoxes}
+    ${miniBoxes}  <img class="delete-x" src="./assets/delete.png" alt="delete-icon">
     </section>`;
 
     removeMessage();
+    savedPalettes.push([pallet])
 }
+
+
+function deletePalletArray(paletteToDelete){
+    for (var i = 0; i < savedPalettes.length; i++){
+        if (savedPalette[i] === paletteToDelete){
+            savedPalette.splice(i,1)
+        }
+    }
+}
+function deletePalette (boxes){
+    var paletteToDelete = document.getElementsByClassName(boxes)
+    if (paletteToDelete[i]){
+        paletteToDelete[i].remove()
+    }
+}
+
 
 function removeMessage(){
     document.querySelector('#mini-palette').classList.add('hidden');
