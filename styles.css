@@ -78,6 +78,7 @@ h1 {
     margin: 5px;
     height: 20px;
     width: 20px;
+    cursor: pointer;
 }
 
 .button-grid {
@@ -100,6 +101,7 @@ h1 {
     font-size: 13px;
     border: 0;
     margin: 15px;
+    cursor: pointer;
   }
 
   .saved-palettes-section {
@@ -125,10 +127,6 @@ h1 {
 }
 
 .boxes{
-    /* display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    flex-direction: row; */
     width: 2rem;
     height: 2rem;
     border-color: black;
@@ -137,5 +135,7 @@ h1 {
 }
 .delete-x{
     height: 2rem;
-    padding-left: 6px;
+    margin:auto 5px;
+    padding-left:10px;
+    cursor: pointer;
 }
