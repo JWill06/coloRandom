@@ -1,6 +1,6 @@
 # ColoRandom Project
 ## Table of Contents
-* Installation 
+- Installation 
 - Usage 
 - Contributing
 - License 
