@@ -1,10 +1,10 @@
 # ColoRandom Project
 ## Table of Contents
-Installation 
-Usage 
-Contributing
-License 
-Challenges/Wins
+* Installation 
+- Usage 
+- Contributing
+- License 
+- Challenges/Wins
 
 ## Installation
 To install our version of ColoRandom, visit this link and fork down our repository. Clone it to your machine, and open the HTML file in your browser to inspect the features. 
