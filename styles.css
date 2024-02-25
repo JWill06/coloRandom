@@ -135,3 +135,7 @@ h1 {
     border: solid 3px;
     margin: 3px;
 }
+.delete-x{
+    height: 2rem;
+    padding-left: 6px;
+}
