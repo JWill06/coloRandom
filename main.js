@@ -1,7 +1,6 @@
 var hexData = [ 'A', 'B', 'C', 'D', 'E', 'F','0','1','2','3','4','5','6','7','8','9'];
 var pallet= [];
 var savedPalettes = [];
-// var par = document.querySelector('#mini-palette');
 var newPalette = document.querySelector('#palette-Button');
 var savePalette = document.querySelector('#save-Palette-Button');
 var savedPaletteSection = document.querySelector('.saved-palettes-section');
@@ -33,42 +32,41 @@ savePalette.addEventListener('click', function(event){
     savedPalette();
 });
 
-deleteButton.addEventListener('click', deletePalletArray);
+savedPaletteSection.addEventListener('click', function(event){
+    event.preventDefault();
+    deletePalette(event);
+});
 
 function savedPalette() {
-     var miniBoxes = ''
-      
-    for (let i = 0; i < pallet.length; i++) {
-        var color = pallet[i]
-       miniBoxes += `
-       <div class="boxes" style="background-color: #${color};">
-       </div>
-       `
+     var miniBoxes = '';
+     
+     
+     for (let i = 0; i < pallet.length; i++) {
+         var color = pallet[i]
+         miniBoxes += `
+         <div class="boxes" style="background-color: #${color};">
+         </div>
+         `
+        
     }
     savedPaletteSection.innerHTML += `
     <section class = "miniBoxes">
     ${miniBoxes}  <img class="delete-x" src="./assets/delete.png" alt="delete-icon">
-    </section>`;
+    </section>`
 
     removeMessage();
-    savedPalettes.push([pallet])
+    savedPalettes.push([pallet]);
+    updateHtml();
+    getRandomPalette();
 }
 
-
-function deletePalletArray(paletteToDelete){
-    for (var i = 0; i < savedPalettes.length; i++){
-        if (savedPalette[i] === paletteToDelete){
-            savedPalette.splice(i,1)
-        }
-    }
+function deletePalette(event){
+    var index = event.target.parentElement.id;
+    if(event.target.className === 'delete-x'){
+        event.target.parentElement.remove();
+        savedPalettes.splice(index, 1);
+    } 
 }
-function deletePalette (boxes){
-    var paletteToDelete = document.getElementsByClassName(boxes)
-    if (paletteToDelete[i]){
-        paletteToDelete[i].remove()
-    }
-}
-
 
 function removeMessage(){
     document.querySelector('#mini-palette').classList.add('hidden');
