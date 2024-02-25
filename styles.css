@@ -84,7 +84,7 @@ h1 {
     display: flex;
     align-items: center;
     margin-top:80px;
-    justify-content:space-evenly;
+    justify-content:center;
   }
   
 .paletteButtons {
@@ -109,6 +109,7 @@ h1 {
     align-items: center;
     border-left: 5px solid black;
     height: 100vh;
+    padding-left: 36px;
 }
 
 .miniBoxes {
@@ -116,13 +117,21 @@ h1 {
     justify-content: space-evenly;
     align-content: center;
     flex-direction: row;
-    width: 2rem;
-    height: 2rem;
-    border-color: black;
-    border: solid 3px;
-    margin: 5px;
+    
 }
 
 .hidden{
     display: none;
+}
+
+.boxes{
+    /* display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-direction: row; */
+    width: 2rem;
+    height: 2rem;
+    border-color: black;
+    border: solid 3px;
+    margin: 3px;
 }

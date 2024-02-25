@@ -8,7 +8,10 @@ var savedPaletteSection = document.querySelector('.saved-palettes-section');
 var unlockIcons = document.querySelectorAll('.icon');
 var isLocked = [false, false, false, false, false];
 
-addEventListener('load', getRandomPalette);
+addEventListener('load', function(){
+    getRandomPalette()
+    updateHtml()
+});
 
 newPalette.addEventListener('click', function(event){
     event.preventDefault();
@@ -30,12 +33,19 @@ savePalette.addEventListener('click', function(event){
 });
 
 function savedPalette() {
-    var section = document.createElement('section');
-    section.className = "mini-palette";
-    var lastPalette = [] 
+     var miniBoxes = ''
+      
     for (let i = 0; i < pallet.length; i++) {
-       
+        var color = pallet[i]
+       miniBoxes += `
+       <div class="boxes" style="background-color: #${color};">
+       </div>
+       `
     }
+    savedPaletteSection.innerHTML += `
+    <section class = "miniBoxes">
+    ${miniBoxes}
+    </section>`;
 
     removeMessage();
 }
